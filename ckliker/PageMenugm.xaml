@@ -1,0 +1,48 @@
+﻿<Page x:Class="ckliker.PageMenugm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ckliker"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMenugm">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" Grid.Column="1" x:Name="ListIndex">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            
+                        <TextBlock Text="{Binding param}"/>
+                        <TextBlock Text="{Binding IndexerSumm}"/>
+                        </StackPanel>
+                        <Button Content="изменить" Background="SkyBlue" Click="Button_Click"/>
+                        <Button Content="dell" Click="Button_Click_3" Background="Pink"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"> 
+            <Button Content="добавить" Click="Button_Click_2" Background="LimeGreen"/>
+            <Button Content=" разлогиниться" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Page>
